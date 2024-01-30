@@ -5,10 +5,10 @@ import argparse
 
 def create_serverless_template(image_tag, 
                     name,
-                    url='https://api.runpod.io/graphql?api_key=R69DUTNS3IDONJ58I2EWXE5N0X0TIG3EFPIIMNNY', 
+                    url='https://api.runpod.io/graphql?api_key=API-KEY', 
                     headers={'content-type': 'application/json'}):
     
-    image_name = f"runpod2023/runpod:{image_tag}"
+    image_name = f"dockerhub-repo/image_name:{image_tag"
 
     # graphql query for creating template serverless runpod
     # to get container registry auth id run following query
@@ -38,7 +38,7 @@ def create_serverless_endpoints(template_id,
                                 name,
                                 num_workers = 3, 
                                 gpu_name = "24_GB_GPU_PRO",
-                                url='https://api.runpod.io/graphql?api_key=R69DUTNS3IDONJ58I2EWXE5N0X0TIG3EFPIIMNNY',
+                                url='https://api.runpod.io/graphql?api_key=API-KEY',
                                 headers={'content-type': 'application/json'}):
     
     gpu_ids = {
